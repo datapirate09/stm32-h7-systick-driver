@@ -21,7 +21,10 @@ struct counter_config {
 	counter_status is_counter_enabled;
 };
 
+typedef void (*systick_callback)(void);
+
 void systick_config(struct counter_config* config);
+void systick_register_callback(systick_callback callback);
 void load_systick_value(uint32_t val);
 uint32_t check_timer_expire(void);
 uint32_t read_current_value(void);

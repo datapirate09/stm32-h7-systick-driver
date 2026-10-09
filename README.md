@@ -8,6 +8,12 @@ optional interrupt enable, and polling-based expiry detection via the COUNTFLAG 
 The repo also features a sample application that starts the timer at any configurable value
 and logs the statement "Timer Elapsed" when the timer counts to 0.
 
+IRQ Handler has been added and it gets executed when the TICKINT bit is enabled. Feature has been
+provided within the same systick configuration register to enable interrupts.
+
+The current sample app configures interrupt and logs the statement "Timer Elapsed" depening on a flag that is handled in the application callback. Polling based sample application code has currently been commented out. Uncomment the corresponding lines for polling based expiry detection
+
+
 ![alt text](image.png)
 
 ## Debugging notes
